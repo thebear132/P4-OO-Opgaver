@@ -59,6 +59,7 @@ public class Bicycle implements Comparable<Bicycle> {
 		}
 		
 		// Opg2 - b
+		// THE PRIORITY QUEUE MAKES USE OF THE COMPARABLE IN THE Bicycle class to compare and sort them by priority!
 		PriorityQueue<Bicycle> bikePriorityQueue = new PriorityQueue<Bicycle>(bikeList.length);
 		for (int i = 0; i < bikeList.length; i++) {
 			bikePriorityQueue.add(bikeList[i]);
@@ -77,6 +78,7 @@ public class Bicycle implements Comparable<Bicycle> {
 			if (bikeLinkedList.get(i).GetSpeed() < 10.0) {
 				System.out.println("Removing slow bike: " + bikeLinkedList.get(i).Status());
 				bikeLinkedList.remove(i);
+				i--;		// Adjust for the removed bike, so to not "skip" the next bike in the loop
 			}
 		}
 		
