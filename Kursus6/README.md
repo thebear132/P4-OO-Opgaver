@@ -3,3 +3,6 @@ Opgave 1
 
 ![](Opgave2.png)
 Opgave 2
+
+![](Opgave3.png)
+Opgave 3
