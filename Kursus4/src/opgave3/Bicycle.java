@@ -7,8 +7,6 @@ public abstract class Bicycle {
 		System.out.println("Accelerating : " + n);
 	}
 	
-	
-	
 	public static void main(String[] args) {
 		Unicycle unc = new Unicycle();
 		unc.pedal();

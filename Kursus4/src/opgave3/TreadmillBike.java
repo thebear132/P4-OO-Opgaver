@@ -10,6 +10,4 @@ public class TreadmillBike extends Bicycle {
 	public void pressBrakes() {
 		this.accelerate(-5);
 	}
-	
-
 }
