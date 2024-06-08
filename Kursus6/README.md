@@ -6,3 +6,6 @@ Opgave 2
 
 ![](Opgave3.png)
 Opgave 3
+
+![](AbstractVsInterface.webp)
+
