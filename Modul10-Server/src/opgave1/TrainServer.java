@@ -85,6 +85,7 @@ public class TrainServer {
                         printTrainList(out);
                     } else {
                         addTrain(inputLine);
+                        out.println("Train added!");
                     }
                 }
                 clientSocket.close();
