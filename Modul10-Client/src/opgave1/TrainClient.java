@@ -55,7 +55,7 @@ public class TrainClient {
 
             String response;
             while ((response = in.readLine()) != null) {
-                System.out.println(response);
+                System.out.println("Response -> " + response);
             }
 
         } catch (IOException ex) {
