@@ -6,7 +6,9 @@ import java.util.regex.Pattern;
 
 class SortByCustom implements Comparator<Train> {
 	String type;
-	public SortByCustom (String type) { this.type = type; }
+	public SortByCustom (String type) {
+		this.type = type;
+	}
 	public int compare(Train a, Train b) {
 		switch (type.strip()) {
 		case "w":
@@ -61,7 +63,8 @@ public class Train implements ElectricTrain {
 		int AmountOfTrains = 5;
 		for (int i = 0; i < AmountOfTrains; i++) {
 			trains.add(new Train(rnd.nextDouble(50, 60), rnd.nextInt(0, AmountOfTrains*10), rnd.nextFloat(50)));
-			System.out.println(trains.get(i).toString());
+			// System.out.println(trains.get(i).toString());
+			System.out.println(trains.get(i));	// toString overrider
 		}
     	
 		
@@ -82,8 +85,11 @@ public class Train implements ElectricTrain {
 		    	System.out.println("No match, try again");
 		    	continue;
 		    }
+		    // Sort using the comparator
 		    System.out.println("Matching to " + matcher.group(1));
+		    // Use Collections, the list and our SortByCustom comparator to sort the trains
 		    Collections.sort(trains, new SortByCustom(matcher.group(1)));
+		    System.out.println(trains);
 		    
 		    
 		    for (Iterator<Train> i = trains.iterator(); i.hasNext();) {
@@ -101,6 +107,7 @@ public class Train implements ElectricTrain {
 		    		break;
 		    	default: break;
 		    	}
+		    	
 		    	switch (matcher.group(2)) {
 		    	case "<":
 		    		if (!(a < Integer.parseInt(matcher.group(3)))) { i.remove(); }

@@ -7,7 +7,6 @@ public class Bicycle {
 	private int roundsPerMinute = 0;
 	private int gear = 1;
 	
-	
 	public Bicycle(String name, String color) {
 		this.name = name;
 		this.color = color;

@@ -10,6 +10,7 @@ public class Main {
         for (int i = 0; i < numberOfOperators; i++) {
             Thread operatorThread = new Thread(new TrainOperator(trainListManager));
             operatorThread.start();
+            System.out.println("Starting operator " + i);
         }
     }
 }

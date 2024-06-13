@@ -8,10 +8,12 @@ public class Train implements ElectricTrain {
 	public void charge_battery() { System.out.println("Hej"); }
 	public void get_battery_status() { System.out.println("Hej"); }
 	public void discharge_battery() { System.out.println("Hej"); }
-	public void accelerate() { System.out.println("Hej"); }
-	public void honk() { System.out.println("Hej"); }
+	public void accelerate() { System.out.println("acc"); }
+	public void honk() { System.out.println("honk"); }
 	
 	public static void main(String args[]) {
 		System.out.println("Hej");
+		Vehicle myTrain = new Train();
+		// myTrain.honk()
 	}
 }

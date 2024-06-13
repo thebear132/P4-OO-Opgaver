@@ -34,7 +34,7 @@ public class Bicycle implements Comparable<Bicycle> {
 		// Opg1
 		int amount = 5;
 		Bicycle[] bikeList = new Bicycle[amount];
-        Random rand = new Random();
+		Random rand = new Random();
 		
 		for (int i = 0; i < bikeList.length; i++) {
 			bikeList[i] = new Bicycle("Bike" + i, rand.nextInt(1000000), (float)rand.nextDouble(100));
